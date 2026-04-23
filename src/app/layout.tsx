@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { League_Spartan } from 'next/font/google';
-import ClientShell from '@/fem/ClientShell';
+import ClientShell from '@/lib/ClientShell';
 import './globals.css';
 
 const leagueSpartan = League_Spartan({

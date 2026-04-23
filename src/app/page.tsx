@@ -1,4 +1,4 @@
-import Invoices from '@/fem/routes/Invoices';
+import Invoices from '@/lib/routes/Invoices';
 
 export default function Home() {
 	return <Invoices />;
