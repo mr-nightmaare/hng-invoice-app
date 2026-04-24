@@ -28,19 +28,19 @@ export function InvoiceCard({
         aria-label={`${clientName}'s invoice details`}
         className="group col-span-1 col-start-1 row-span-1 row-start-1 mb-6 text-heading-s-variant md:mb-0 md:justify-self-start lg:pl-2"
       >
-        <span className="text-fem-blue-400 group-focus-within:text-fem-violet-400 group-hover:text-fem-violet-400">
+        <span className="text-fem-blue-400 group-focus-within:text-fem-violet-400 group-hover:text-fem-violet-400" style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 700, fontSize: '15px', letterSpacing: '-0.25px', lineHeight: '15px' }}>
           #
         </span>
-        {id}
+        <span style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 700, fontSize: '15px', letterSpacing: '-0.25px', lineHeight: '15px' }}>{id}</span>
       </Link>
-      <p className="mb-2.5 text-[0.8125rem] leading-none text-fem-blue-300 dark:text-fem-blue-200 md:col-span-1 md:col-start-2 md:mb-0 md:justify-self-start">
-        <span className="text-fem-blue-400 dark:text-fem-blue-200">Due</span>{" "}
+      <p className="mb-2.5 text-[0.8125rem] leading-none text-fem-blue-300 dark:text-[#DFE3FA] md:col-span-1 md:col-start-2 md:mb-0 md:justify-self-start" style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 500, fontSize: '13px', letterSpacing: '-0.1px', lineHeight: '15px' }}>
+        <span style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 500, fontSize: '13px', letterSpacing: '-0.1px', lineHeight: '15px', color: '#858BB2' }}>Due</span>{" "}
         {toEnglishDate(paymentDue)}
       </p>
       <p className="col-span-1 col-start-2 row-span-1 row-start-1 self-start justify-self-end text-[0.8125rem] leading-[1.15em] text-fem-blue-400 dark:text-white md:col-start-3 md:self-auto md:justify-self-start">
         {clientName}
       </p>
-      <p className="col-span-1 col-start-1 row-span-1 row-start-3 text-heading-s md:col-start-4 md:row-start-1">
+      <p className="col-span-1 col-start-1 row-span-1 row-start-3 text-[#0C0E16] md:col-start-4 md:row-start-1 dark:text-white" style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 700, fontSize: '15px', letterSpacing: '-0.25px', lineHeight: '24px', textAlign: 'right' }}>
         £ {asCurrency("en-GB", total)}
       </p>
       <InvoiceStatus status={status} />

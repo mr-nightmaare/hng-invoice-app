@@ -26,6 +26,20 @@ const Invoice = ({ invoiceId }: { invoiceId: string }) => {
     setShowInvoiceForm,
   } = useContext(UserCtx);
   const invoice = invoices?.find((item) => item.id == invoiceId);
+  if (!invoice) {
+    return (
+      <main className="relative px-6 pb-8 pt-[6.5625rem] md:px-12 md:pt-[8.0625rem] lg:pt-[4.875rem]">
+        <div className="mx-auto flex max-w-[45.625rem] flex-col gap-4 pb-36 md:gap-6 md:pb-0">
+          <GoBack
+            handleClick={() => {
+              router.push("/");
+            }}
+          />
+          <p className="text-fem-blue-400">Loading...</p>
+        </div>
+      </main>
+    );
+  }
   const cancelRef = useRef<HTMLButtonElement | null>(null);
   const deleteRef = useRef<HTMLButtonElement | null>(null);
   const modalRef = useRef<HTMLDivElement | null>(null);

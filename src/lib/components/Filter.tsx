@@ -36,7 +36,7 @@ const Filter = ({
         onClick={toggleOptions}
         disabled={invoices.length === 0}
       >
-        <span className="text-heading-s-variant">
+        <span className="text-heading-s-variant dark:text-white" style={{ fontFamily: "'League Spartan', sans-serif", fontWeight: 700, fontSize: '15px', letterSpacing: '-0.25px', lineHeight: '15px' }}>
           Filter {!isMobile && "by status"}
         </span>
         <svg
